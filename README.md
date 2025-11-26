@@ -18,7 +18,9 @@ Common use cases include:
 ## Getting Started
 
 Download a released integration flow to the right and upload that to SAP
-Integration Suite as a new REST API.
+Integration Suite as a new API.
+
+![Adding a new API integration in SAP Integration Suite.](assets/add-new-api-integration.png)
 
 The integration process consists of a number of subprocesses:
 1. Setup (a test setup which should be substituted for an actual event source,
