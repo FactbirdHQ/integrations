@@ -164,8 +164,8 @@ Factbird_Event_Tags/
 
 ### 6B — Deploy the Tag Change Script
 
-1. Open **Ignition Designer → Scripting → Timer**.
-2. Create a **New Timer Script**.
+1. Open **Ignition Designer → Scripting → Tag Change**.
+2. Create a **New Tag Change Script**.
 3. Paste the contents of [`scripts/event_publisher.py`](scripts/event_publisher.py).
 4. Update `MQTT_SERVER_NAME` and `MQTT_TOPIC_TEMPLATE`.
 5. Under **Tag Path**, drag in the highest node of your tag provider and

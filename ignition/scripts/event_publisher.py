@@ -9,8 +9,8 @@ def onTagChange(initialChange, newValue, previousValue, event, executionCount):
 	requires the entry-point function to be the first line of the script.
 
 	Setup:
-	  1. In Ignition Designer, go to Scripting → Timer.
-	  2. Right-click → New Timer Script.
+	  1. In Ignition Designer, go to Scripting → Tag Change.
+	  2. Right-click → New Tag Change Script.
 	  3. Paste this script.
 	  4. Under Tag Path, drag in the highest node of your tag provider and
 	     append /* (e.g. [Factbird Event]Plant1/*).
