@@ -10,6 +10,7 @@ documentation and resources.
 
 | Integration | Description |
 |-------------|-------------|
+| [Ignition](ignition/) | Inductive Automation Ignition → AWS IoT Core via Cirrus Link MQTT Transmission |
 | [SAP](sap/) | SAP Integration Suite flow for synchronizing process orders and products with Factbird |
 
 ## Contributing
