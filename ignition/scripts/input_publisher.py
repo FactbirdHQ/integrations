@@ -1,25 +1,26 @@
-"""
-Input Data Publisher — Timer Script (Step 6A)
-
-Publishes all tags from a designated tag provider to AWS IoT Core on a
-timed interval via MQTT Transmission (Cirrus Link).
-
-Setup:
-  1. In Ignition Designer, go to Scripting → Timer.
-  2. Right-click → New Timer Script.
-  3. Paste this script.
-  4. Set the delay to 5000 ms (5 seconds).
-  5. Save the project.
-
-Configuration:
-  - MQTT_SERVER_NAME : Name of the MQTT server setting created in Step 2.
-  - MQTT_TOPIC_TEMPLATE : Topic pattern — the client ID is appended automatically.
-  - provider : Name of the Realtime Tag Provider created in Step 4A.
-  - limit : Maximum number of tags to query per cycle.
-"""
-
-
 def handleTimerEvent():
+	"""
+	Input Data Publisher — Timer Script (Step 6A)
+
+	Publishes all tags from a designated tag provider to AWS IoT Core on a
+	timed interval via MQTT Transmission (Cirrus Link).
+
+	IMPORTANT: This function definition must remain on line 1 — Ignition
+	requires the entry-point function to be the first line of the script.
+
+	Setup:
+	  1. In Ignition Designer, go to Scripting → Timer.
+	  2. Right-click → New Timer Script.
+	  3. Paste this script.
+	  4. Set the delay to 5000 ms (5 seconds).
+	  5. Save the project.
+
+	Configuration:
+	  - MQTT_SERVER_NAME : Name of the MQTT server setting created in Step 2.
+	  - MQTT_TOPIC_TEMPLATE : Topic pattern — the client ID is appended automatically.
+	  - provider : Name of the Realtime Tag Provider created in Step 4A.
+	  - limit : Maximum number of tags to query per cycle.
+	"""
 	import json
 	import traceback
 	import time
