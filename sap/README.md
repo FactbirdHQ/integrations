@@ -17,7 +17,8 @@ Common use cases include:
 
 ## Getting Started
 
-Download a released integration flow to the right and upload that to SAP
+Download a released integration flow from
+https://github.com/FactbirdHQ/integrations/releases and upload that to SAP
 Integration Suite as a new API.
 
 ![Adding a new API integration in SAP Integration Suite.](assets/add-new-api-integration.png)
