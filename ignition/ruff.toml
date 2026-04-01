@@ -1,0 +1,20 @@
+# Ignition scripts are Jython (Python 2) — enforce tabs per Ignition requirements.
+target-version = "py27"
+
+[format]
+indent-style = "tab"
+
+[lint]
+# Rules suitable for Ignition's Jython environment.
+select = [
+  "E",   # pycodestyle errors
+  "W",   # pycodestyle warnings
+  "F",   # pyflakes
+  "I",   # isort (import ordering)
+]
+ignore = [
+  "E101", # mixed spaces and tabs — we use tabs only
+  "W191", # indentation contains tabs — intentional
+  "F821", # undefined name — Ignition provides `system` as a global
+  "E722", # bare except — acceptable in Ignition scripting
+]
