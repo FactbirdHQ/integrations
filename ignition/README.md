@@ -4,6 +4,10 @@ Connect Inductive Automation **Ignition** to **AWS IoT Core** using the
 **Cirrus Link MQTT Transmission** module. Data is published over MQTT with
 mutual-TLS authentication.
 
+> **Note:** This is a **non-Sparkplug B** integration. The scripts publish
+> plain JSON over custom MQTT topics. Sparkplug B support will be added in
+> a future iteration.
+
 ## Prerequisites
 
 | Component | Purpose |
