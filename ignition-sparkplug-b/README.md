@@ -50,7 +50,7 @@ Under the **Servers** tab, create a new MQTT Server Setting:
 |---|---|
 | **Client ID** | UUID provided by Factbird |
 | **Subscribe To Legacy STATE Topic** | Unchecked |
-| **Data Format Type** | Sparkplug B v1.0 |
+| **Data Format Type** | Sparkplug B v1.0 *(Protobuf)* or Sparkplug B v1.0 JSON |
 
 ### RPC Client Connection
 
@@ -192,8 +192,13 @@ spBv1.0/{group_id}/{message_type}/{edge_node_id}[/{device_id}]
 
 ## Sparkplug B Payload Format
 
-Payloads are encoded using **Protocol Buffers** (not JSON). Each message
-contains a `seq` number and a list of metrics:
+The payload encoding depends on the **Data Format Type** chosen in Step 2:
+
+- **Sparkplug B v1.0** — Protocol Buffers (binary, more compact)
+- **Sparkplug B v1.0 JSON** — JSON (human-readable, easier to debug)
+
+Both formats carry the same structure. Each message contains a `seq` number
+and a list of metrics:
 
 | Field | Description |
 |---|---|
