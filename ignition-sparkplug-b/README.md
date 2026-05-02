@@ -136,11 +136,17 @@ spBv1.0/Plant1/DDATA/IgnitionGateway/Boiler_PLC
 > - **Publish by Trigger Tag** — publishes all tags when a designated trigger
 >   tag transitions. Useful for batch or periodic snapshots.
 
-## 7 — Deploy the Refresh Timer Script
+## 7 — Deploy the Refresh Timer Script (Temporary Workaround)
 
-The transmission module must be periodically refreshed to restart and
-re-send a **DBIRTH** message. This ensures the broker always has an
-up-to-date metric catalog.
+> **Why this is needed:** Sparkplug B only publishes **DDATA** messages when
+> a tag value *changes*. Factbird requires **periodic data** — even when
+> values remain unchanged — to accurately measure production speed and
+> derive downtime. Without a regular heartbeat of data, gaps in reporting
+> would be misinterpreted as downtime.
+>
+> As a temporary workaround, a timer script periodically triggers a
+> **Transmission Refresh**, which restarts the module and forces a new
+> **DBIRTH** message containing the full metric catalog with current values.
 
 1. Open **Ignition Designer → Scripting → Timer**.
 2. Create a **New Timer Script**.
