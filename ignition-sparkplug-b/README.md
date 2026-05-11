@@ -76,7 +76,7 @@ On the default server set, enable the following advanced settings:
 
 ## 4 — Create a Tag Provider
 
-**Config → Tags → Realtime → Create new Realtime Tag Provider**
+**Services → Tags → Realtime Tag Providers → Create Tag Provider**
 
 - Type: *Standard Tag Provider*
 - Name: `Factbird Tags`
@@ -88,7 +88,7 @@ the Sparkplug B topic namespace: **Group → Edge Node → Device**.
 
 ```
 Factbird_Tags/
-└── Plant1/                    <-- Group ID
+└── Factbird/                  <-- Group ID
     └── IgnitionGateway/       <-- Edge Node ID
         └── Boiler_PLC/        <-- Device ID — tags live here
 ```
@@ -104,7 +104,7 @@ The folder hierarchy determines the Sparkplug B topic structure. For the
 example above, messages are published to:
 
 ```
-spBv1.0/Plant1/DDATA/IgnitionGateway/Boiler_PLC
+spBv1.0/Factbird/DDATA/IgnitionGateway/Boiler_PLC
 ```
 
 ## 6 — Create a Transmitter
@@ -118,7 +118,7 @@ spBv1.0/Plant1/DDATA/IgnitionGateway/Boiler_PLC
 | **Tag Provider** | `Factbird_Tags` |
 | **Tag Path** | *(blank, or a subfolder path)* |
 | **Server Set** | AWS IoT Core server set |
-| **Group ID** | `Plant1` |
+| **Group ID** | `Factbird` |
 | **Edge Node ID** | `IgnitionGateway` |
 | **Device ID** | `Boiler_PLC` |
 
