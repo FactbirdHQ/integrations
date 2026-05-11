@@ -26,11 +26,11 @@ Connect Inductive Automation **Ignition** to **AWS IoT Core** using the
 In the Ignition Gateway Web UI navigate to **Connections → MQTT Transmission
 Settings → Servers → Certificates**.
 
-Click **Create new Certificate** and upload each file:
+Click **Create new Certificate** and upload each file from the downloaded certificate archive:
 
-- Device certificate (`.pem.crt`)
-- Private key (`.pem.key`)
-- Root CA certificate
+- Device certificate (`.cert.pem`)
+- Private key (`.private.key`)
+- Root CA certificate ([https://www.amazontrust.com/repository/AmazonRootCA1.pem](https://www.amazontrust.com/repository/AmazonRootCA1.pem))
 
 ## 2 — Configure the MQTT Server Connection
 
