@@ -17,7 +17,8 @@ Connect Inductive Automation **Ignition** to **AWS IoT Core** using the
 | Ignition Gateway (>= 8.x) | SCADA platform |
 | Cirrus Link MQTT Transmission module | MQTT client inside Ignition with Sparkplug B support |
 | AWS IoT Core endpoint + certificates | Cloud-side MQTT broker |
-| Certificate bundle from Factbird | Device cert (`.pem.crt`), private key (`.pem.key`), Root CA |
+| Certificate bundle from Factbird | Device cert (`.cert.pem`), private key (`.private.key`) |
+| AWS | Root CA |
 
 ---
 
